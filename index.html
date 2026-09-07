@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ajinkya & Yash</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #0b0b0f;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Background Glow */
+        body::before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: #7c3aed;
+            filter: blur(150px);
+            opacity: 0.35;
+            top: -150px;
+            left: -150px;
+        }
+
+        body::after {
+            content: "";
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            background: #ec4899;
+            filter: blur(150px);
+            opacity: 0.25;
+            bottom: -150px;
+            right: -100px;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            width: 90%;
+            max-width: 1000px;
+            padding: 60px;
+            border-radius: 30px;
+
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(20px);
+
+            border: 1px solid rgba(255,255,255,0.15);
+
+            text-align: center;
+
+            box-shadow:
+                0 20px 60px rgba(0,0,0,0.5);
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 8px 18px;
+            border-radius: 50px;
+
+            background: rgba(124,58,237,0.2);
+            border: 1px solid #8b5cf6;
+
+            color: #c4b5fd;
+            font-size: 14px;
+
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: 65px;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+        }
+
+        h1 span {
+            background: linear-gradient(
+                90deg,
+                #a855f7,
+                #ec4899,
+                #f97316
+            );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .intro {
+            max-width: 650px;
+            margin: auto;
+
+            font-size: 18px;
+            line-height: 1.8;
+
+            color: #b5b5c3;
+        }
+
+        .cards {
+            display: flex;
+            gap: 25px;
+            margin-top: 45px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 300px;
+            padding: 30px;
+
+            border-radius: 20px;
+
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+
+            border-color: #a855f7;
+
+            box-shadow:
+                0 15px 40px rgba(168,85,247,0.25);
+        }
+
+        .avatar {
+            width: 75px;
+            height: 75px;
+
+            margin: auto;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 28px;
+            font-weight: bold;
+
+            margin-bottom: 20px;
+        }
+
+        .ajinkya {
+            background: linear-gradient(
+                135deg,
+                #7c3aed,
+                #a855f7
+            );
+        }
+
+        .yash {
+            background: linear-gradient(
+                135deg,
+                #ec4899,
+                #f97316
+            );
+        }
+
+        .card h2 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #aaa;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        .footer {
+            margin-top: 40px;
+            color: #777;
+            font-size: 14px;
+        }
+
+        @media(max-width: 600px) {
+
+            .container {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 42px;
+            }
+
+            .intro {
+                font-size: 16px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <div class="tag">
+            ✦ MEET THE DUO
+        </div>
+
+        <h1>
+            We Are <span>Ajinkya & Yash</span>
+        </h1>
+
+        <p class="intro">
+            Two passionate individuals with big ideas,
+            creative minds, and the ambition to build
+            something meaningful together.
+        </p>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="avatar ajinkya">
+                    A
+                </div>
+
+                <h2>Ajinkya</h2>
+
+                <p>
+                    Curious, creative and always exploring
+                    new ideas. Passionate about technology,
+                    innovation and building exciting things.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="avatar yash">
+                    Y
+                </div>
+
+                <h2>Yash</h2>
+
+                <p>
+                    Driven, ambitious and ready to take
+                    ideas to the next level. Focused on
+                    learning, growing and creating impact.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer">
+            ✦ Dream Big • Build Together • Grow Forever ✦
+        </div>
+
+    </div>
+
+</body>
+</html>
